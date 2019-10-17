@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles/general.css">
   <link rel="stylesheet" href="styles/contact.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <title>Document</title>
 </head>
 <body>
   <nav class="navbar">
     <span class="navbar-toggle" id="js-navbar-toggle"><i class="fas fa-bars"></i></span>
-    <a href="index.html" class="logo"><i class="fas fa-home"></i></a>
+    <a href="index.html" class="home-button" aria-label="Returns to home sreeen"><i class="fas fa-home"></i></a>
     <ul class="main-nav" id="js-menu">
       <li><a href="index.html" class="nav-links">Home</a></li>
       <li><a href="#" class="nav-links">Visuals</a></li>
@@ -24,16 +24,16 @@
 
 <article class="main-content">
   <div class="form-group">
-    <label>First Name</label>
-    <input value="" class="input-control" />
+    <label for="name-form">First Name</label>
+    <input value="" class="input-control" id="name-form"/>
 
-    <label class="right-inline">Last Name</label>
-    <input value="" class="input-control" />
+    <label for="lname-form" class="right-inline">Last Name</label>
+    <input value="" class="input-control" id="lname-form"/>
   </div>
 
   <div class="form-group">
-    <label>Email</label>
-    <input value="" class="input-control" />
+    <label for="email-form">Email</label>
+    <input value="" class="input-control" id="email-form"/>
   </div>
 
   <div class="form-group">
