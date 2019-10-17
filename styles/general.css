@@ -33,6 +33,7 @@ body {
 }
 
 .home-button {
+    color: aqua;
     display: inline-block;
     font-size: 22px;
     margin-top: 10px;
