@@ -3,11 +3,4 @@ body {
     padding: 0px;
     height: 100%;
     background-color: #000000;
-  }
-  span {
-    position: absolute;
-    margin: 10px 10px;
-    font-family: Helvetica Neue, Helvetica, Arial;
-    color: #ccc;
-    font-size: .8em;
-  }
+}
