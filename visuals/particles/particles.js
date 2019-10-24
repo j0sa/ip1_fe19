@@ -1,21 +1,21 @@
-var PARTICLES_NUM = 5000;
-var BANG_SCALE = Math.pow( 50, 3 );
+const PARTICLES_NUM = 5000;
+const BANG_SCALE = Math.pow( 50, 3 );
 
-var cvs = document.querySelector('canvas');
-var ctx = cvs.getContext('2d');
+const cvs = document.querySelector('canvas');
+const ctx = cvs.getContext('2d');
 
-var cW = window.innerWidth;
-var cH = window.innerHeight;
+const cW = window.innerWidth;
+const cH = window.innerHeight;
 
-var particles = [];
-var isMouseDown = false;
-var mouseX, mouseY;
-var dx, dy, d, t, f;
+let particles = [];
+let isMouseDown = false;
+let mouseX, mouseY;
+let dx, dy, d, t, f;
 
 cvs.width = cW;
 cvs.height = cH;
 
-var requestAnimFrame = (function(){
+let requestAnimFrame = (function(){
     return  window.requestAnimationFrame       ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame    ||
@@ -44,7 +44,7 @@ Particle.prototype.draw = function(){
 
 init()
 function init(){
-  for (var i = 0; i < PARTICLES_NUM; i++) {
+  for (let i = 0; i < PARTICLES_NUM; i++) {
     particles.push(new Particle());
   }
   cvs.onmousedown = onMouseDown;
@@ -55,8 +55,8 @@ function draw() {
   ctx.fillStyle = "#000";
   ctx.fillRect(0,0,cW,cH);
 
-  for (var i = 0; i < PARTICLES_NUM; i++) {
-    var p = particles[i];
+  for (let i = 0; i < PARTICLES_NUM; i++) {
+    let p = particles[i];
     p.draw();
   }
   update();
@@ -65,8 +65,8 @@ function draw() {
 
 function update() {
   // Update every particle's position according to their velocities
-  for (var i = 0; i < PARTICLES_NUM; i++) {
-    var p = particles[i];
+  for (let i = 0; i < PARTICLES_NUM; i++) {
+    let p = particles[i];
 
     if(isMouseDown){
       d = ( dx = mouseX - p.x ) * dx + ( dy = mouseY - p.y ) * dy;
@@ -89,24 +89,24 @@ function update() {
 
     // Check the distance between particles and compare
     // them to the minDist
-    for(var j = i + 1; j < PARTICLES_NUM; j++) {
-      var p2 = particles[j];
+    for(let j = i + 1; j < PARTICLES_NUM; j++) {
+      let p2 = particles[j];
       checkDistance(p, p2);
     }
   }
 }
 
 function checkDistance(p1, p2) {
-  var dist;
-  var minDist = 70;
-  var dx = p1.x - p2.x;
-  var dy = p1.y - p2.y;
+  let dist;
+  let minDist = 70;
+  let dx = p1.x - p2.x;
+  let dy = p1.y - p2.y;
 
   dist = Math.sqrt(dx*dx + dy*dy);
 
   if(dist <= minDist) {
     // particles acceleration depending on their distance
-    var ax = dx/2000,
+    let ax = dx/2000,
         ay = dy/2000;
 
     // Apply the acceleration on the particles
@@ -126,7 +126,7 @@ window.onresize = function(){
   ctx.canvas.height = cH;
 }
 function onMouseDown(e) {
-  var rect = e.target.getBoundingClientRect();
+  let rect = e.target.getBoundingClientRect();
   mouseX = e.clientX - rect.left;
   mouseY = e.clientY - rect.top;
   isMouseDown = true;
