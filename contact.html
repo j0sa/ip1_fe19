@@ -10,6 +10,7 @@
   <title>Document</title>
 </head>
 <body>
+
   <nav class="navbar">
     <span class="navbar-toggle" id="js-navbar-toggle"><i class="fas fa-bars"></i></span>
     <a href="index.html" class="home-button" aria-label="Returns to home sreeen"><i class="fas fa-home"></i></a>
@@ -18,13 +19,14 @@
       <li><a href="contact.html" class="nav-links">Contact</a></li>
     </ul>
   </nav>
+  
   <script src="scripts/dropdown.js"></script>
 
 <article class="main-content">
+
   <div class="form-group">
     <label for="name-form">First Name</label>
     <input value="" class="input-control" id="name-form"/>
-
     <label for="lname-form" class="right-inline">Last Name</label>
     <input value="" class="input-control" id="lname-form"/>
   </div>
@@ -36,8 +38,7 @@
 
   <div class="form-group">
     <label>&nbsp;</label>
-    <button>Send</button>
-
+    <button onclick="validateForm()">Send</button>
   </div>
 
 </article>
