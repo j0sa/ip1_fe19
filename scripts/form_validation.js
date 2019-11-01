@@ -1,11 +1,11 @@
 function validateForm() {
-  if (document.getElementById('name-form').value || document.getElementById('lname-form').value == "") {
-    alert('You need to insert a name');
-    return false;
-  }
-  let emailRegEx = /^[\w ]+$/;
-  if (!emailRegEx.test(document.getElementById('email-form'))) {
-    alert("Email contains invalid characters!");
+  let emailID = document.form.email.value;
+  atpos = emailID.indexOf("@");
+  dotpos = emailID.lastIndexOf(".");
+
+  if (atpos < 1 || (dotpos - atpos < 2)) {
+    alert("Please enter correct email ID")
+    document.form.email.focus();
     return false;
   }
   return true;

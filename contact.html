@@ -26,26 +26,13 @@
 
   <article class="main-content">
 
-    <div class="form-group">
-      <label for="name-form">First Name</label>
-      <input value="" class="input-control" id="name-form" />
-      <label for="lname-form" class="right-inline">Last Name</label>
-      <input value="" class="input-control" id="lname-form" />
-    </div>
-
-    <div class="form-group">
-      <label for="email-form">Email</label>
-      <input value="" class="input-control" id="email-form" />
-    </div>
-
-    <div class="form-group">
-      <label>&nbsp;</label>
-      <button onclick="validateForm()">Send</button>
-      <script src="scripts/form_validation.js"></script>
-    </div>
+    <form name="form" onsubmit="return validateForm()">
+      <input name="email" title="Email address" id="email" placeholder="Your email here.">
+      <button type="submit">Submit</button>
+    </form>
+    <script src="/scripts/form_validation.js"></script>
 
   </article>
-
 </body>
 
 </html>
