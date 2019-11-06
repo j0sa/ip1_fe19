@@ -1,7 +1,6 @@
 form {
 	display: flex;
 	flex-flow: row wrap;
-	
 	border: 0.1em solid grey;
 	padding: 2em;
 	font-family: 'Open Sans', sans-serif;
@@ -10,13 +9,11 @@ form {
 }
 input {
  	flex-grow: 1;
-
 	padding: 16px;
 	font-size: 16px;
 }
 label {
  	flex-basis: 100%;
-	
 	display: block;
 	font-size: 26px;
 	margin-bottom: 0.5em;
